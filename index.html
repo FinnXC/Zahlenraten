@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finns Zahlenraten</title>
+    <style>
+        h1 {
+            color: green;
+            border: 1px solid red;
+        }
+
+        span {
+            border: 1px solid green;
+            display: block;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var Gesuchtezahl= Math.round(Math.random(1) *100);
+
+            $("#Pruefen").click(function(){
+               var Zahl= $("#Zahl").val();
+                console.log(Gesuchtezahl);
+               if (Zahl > Gesuchtezahl){
+                   alert("Zahl ist ist kleiner")
+               }
+               else if(Zahl < Gesuchtezahl){
+                   alert("Zahl ist ist groesser")
+               }
+               else{
+                   alert("Zahl ist ist gleich " + Gesuchtezahl)
+               }
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Finns Zahlenraten</h1>
+
+<p>
+    Gib eine Zahl von 1 bis 100 ein.
+<input type="text" id="Zahl" />
+    <input type="button" id="Pruefen" value="Check">
+
+</p>
+</body>
+</html>
